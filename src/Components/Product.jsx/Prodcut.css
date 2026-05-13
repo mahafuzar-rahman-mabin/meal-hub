@@ -1,0 +1,30 @@
+.prodcutsBox {
+  border: 2px solid orange;
+  border-radius: 10px;
+  text-align: left;
+  padding: 15px;
+}
+.proImg {
+  border-radius: 10px;
+  width: 310px;
+}
+.name-btn {
+  margin-top: 10px;
+  background-color: orange;
+  color: white;
+  border: 2px solid orange;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.name-btn:hover {
+  background-color: transparent;
+  color: orange;
+}
+
+/* .name-btn:active {
+  background-color: darkorange;
+  border-color: darkorange;
+} */
