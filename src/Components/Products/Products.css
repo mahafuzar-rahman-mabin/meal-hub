@@ -2,4 +2,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  grid-column: span 4;
+}
+.main-box {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+}
+.cartBox {
+  border: 2px solid orange;
+  width: 100%;
+  border-radius: 20px;
+  grid-column: span 1;
+  padding: 15px;
 }

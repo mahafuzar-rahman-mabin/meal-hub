@@ -1,12 +1,22 @@
+import { useState } from "react";
 import "./Prodcut.css";
-const Product = ({ product }) => {
+const Product = ({ product, handelDatahook }) => {
+  const [btnclick, setBtnclick] = useState(false);
+  const hendelClick = () => {
+    !btnclick && setBtnclick(true);
+    handelDatahook(product);
+  };
   return (
     <div className="prodcutsBox">
       <img className="proImg" src={product.strMealThumb} alt="" />
       <h2>{product.strMeal}</h2>
       <p>Category : {product.strCategory}</p>
       <p>Meal Country : {product.strCountry}</p>
-      <button className="name-btn">Order</button>
+      <button
+        onClick={hendelClick}
+        className={btnclick ? "name-btnhover " : "name-btn"}>
+        {btnclick ? "Ordered" : "Order"}
+      </button>
     </div>
   );
 };
