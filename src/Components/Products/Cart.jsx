@@ -1,8 +1,9 @@
 import "./Cart.css";
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handelRemovedCart }) => {
   return (
     <div className="main-section">
       <div className="cart-img-section">
+        <button onClick={() => handelRemovedCart(cart.idMeal)}>x</button>
         <img className="cart-img" src={cart.strMealThumb} alt={cart.strMeal} />
       </div>
 

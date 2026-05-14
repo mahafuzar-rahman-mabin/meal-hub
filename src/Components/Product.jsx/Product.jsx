@@ -12,10 +12,8 @@ const Product = ({ product, handelDatahook }) => {
       <h2>{product.strMeal}</h2>
       <p>Category : {product.strCategory}</p>
       <p>Meal Country : {product.strCountry}</p>
-      <button
-        onClick={hendelClick}
-        className={btnclick ? "name-btnhover " : "name-btn"}>
-        {btnclick ? "Ordered" : "Order"}
+      <button onClick={hendelClick} className="name-btn">
+        Order
       </button>
     </div>
   );

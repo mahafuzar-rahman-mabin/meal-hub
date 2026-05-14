@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import Product from "../Product.jsx/Product";
 import "./Products.css";
 import Cart from "./Cart";
+import { DataAddToweb } from "../../LocalStore/Storage";
 
 const Products = ({ productsAllData }) => {
   const productsData = use(productsAllData);
@@ -13,6 +14,13 @@ const Products = ({ productsAllData }) => {
       const newData = [...addData, product];
       setAddData(newData);
     }
+
+    DataAddToweb(addData);
+  };
+  // const filterData = [];
+  const handelRemovedCart = (id) => {
+    const finalDAta = addData.filter((ele) => ele.idMeal !== id);
+    setAddData(finalDAta);
   };
 
   //   console.log(addData);
@@ -34,7 +42,10 @@ const Products = ({ productsAllData }) => {
           <h2>place order</h2>
           <div className="all-cart">
             {addData.map((cart) => (
-              <Cart key={cart.idMeal} cart={cart}></Cart>
+              <Cart
+                handelRemovedCart={handelRemovedCart}
+                key={cart.idMeal}
+                cart={cart}></Cart>
             ))}
           </div>
         </div>

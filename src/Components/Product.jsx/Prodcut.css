@@ -19,7 +19,7 @@
   transition: 0.3s;
 }
 
-.name-btnhover {
+.name-btn:hover {
   margin-top: 10px;
   /* background-color: orange; */
   /* color: white; */
